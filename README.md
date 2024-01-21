@@ -4,14 +4,14 @@ This code is written by GPT-4.
 
 Just for my own requirement to handle many files on NAS.
 
-This program changes file owner recusively based on DFS algorithm.
+This program changes file owner and mode recusively based on DFS algorithm.
 
 And Next texts is created by GPT-4 and edited by me for README.md.
 
 # R(ust)Chown
 
 ## Overview
-`rchown` is a Rust-based command-line tool for changing file ownership recursively on NAS systems, using a DFS algorithm.
+`rchown` is a Rust-based command-line tool for changing file ownership and mode recursively on NAS systems, using a DFS algorithm.
 
 ## Prerequisites
 - Rust environment ([Installation guide](https://www.rust-lang.org/tools/install))
@@ -26,10 +26,11 @@ cargo build --release
 
 ## Usage
 ```bash
-./target/release/rchown <user> <group> <target_directory>
+./target/release/rchown <user> <group> <mod> <target_directory>
 ```
 - `<user>`: New Owner UserName
 - `<group>`: New Owner GroupName
+- `<mode>`  : New file Mode. example\) 755
 - `<target_directory>`: Directory for ownership change.
 
 
